@@ -1,7 +1,7 @@
+"use strict";
 const { app, BrowserWindow, Menu, MenuItem } = require("electron");
 const path = require("path");
 const NODE_ENV = process.env.NODE_ENV;
-
 function createWindow() {
     // Create the browser window.
     const mainWindow = new BrowserWindow({

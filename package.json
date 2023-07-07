@@ -1,7 +1,7 @@
 {
   "name": "vue-mhxy",
   "private": true,
-  "version": "1.0.0",
+  "version": "v1.0.0",
   "main": "electron/main.js",
   "author": "youzhirong",
   "license": "Apache License 2.0",
@@ -15,14 +15,22 @@
     "preview": "vite preview",
     "app": "wait-on tcp:5173 && cross-env NODE_ENV=development  electron ./",
     "electron:build": "vite build && electron-builder",
-    "electron:buildtsc": "vue-tsc --noEmit && vite build && electron-builder"
+    "appb": "vite build && electron-builder --win && electron-builder",
+    "electron:buildtsc": "vue-tsc --noEmit && vite build && electron-builder",
+    "electron:buildwin": "electron-packager ./ --platform=win32 --out ./output/win  --overwrite  --ignore=node_modules --arch=x64",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "dependencies": {
     "ant-design-vue": "^3.2.20",
     "dayjs": "^1.11.9",
     "dexie": "^3.2.4",
     "dexie-export-import": "^4.0.7",
+    "electron-log": "^4.4.8",
+    "electron-squirrel-startup": "^1.0.0",
     "electron-store": "^8.1.0",
+    "electron-updater": "^6.1.1",
     "nedb": "^1.8.0",
     "path-browserify": "^1.0.1",
     "update-electron-app": "^2.0.1",
@@ -30,6 +38,12 @@
     "vue-router": "^4.2.2"
   },
   "devDependencies": {
+    "@electron-forge/cli": "^6.2.1",
+    "@electron-forge/maker-deb": "^6.2.1",
+    "@electron-forge/maker-rpm": "^6.2.1",
+    "@electron-forge/maker-squirrel": "^6.2.1",
+    "@electron-forge/maker-zip": "^6.2.1",
+    "@electron-forge/plugin-auto-unpack-natives": "^6.2.1",
     "@types/nedb": "^1.8.13",
     "@vitejs/plugin-vue": "^4.1.0",
     "cross-env": "^7.0.3",
@@ -42,9 +56,9 @@
     "wait-on": "^7.0.1"
   },
   "build": {
+    "appId": "com.mryzr.mhxytool",
     "productName": "mhxytool",
-    "appId": "com.mryzr",
-    "copyright": "2022@sentangle",
+    "copyright": "youzhirong",
     "directories": {
       "output": "output"
     },
@@ -58,6 +72,13 @@
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true
     },
-    "linux": {}
+    "linux": {},
+    "publish": {
+      "provider": "github",
+      "owner": "youzhirong",
+      "repo": "mhxyTool",
+      "token": "xxx",
+      "releaseType": "release"
+    }
   }
 }

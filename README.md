@@ -1,18 +1,27 @@
-# Vue 3 + TypeScript + Vite
+![Licence](https://img.shields.io/badge/licence-none-green.svg)
+## 简介
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+- 自己写的多平台（win、mac、linux）桌面应用程序，内容关于《梦幻西游》游戏的工具箱，也分享给大家，希望有所帮助，感谢大家 [Star](https://github.com/youzhirong/mhxyTool/stargazers) & [Fork](https://github.com/youzhirong/mhxyTool/network/members) 的支持。
+- 目前功能有《宝宝环记录器》，《收环计算器》，就是类似记账本记录功能而已。
 
-## Recommended IDE Setup
+## 特征&提供
+- 只是用于研究多平台应用程序
+- 内容不知道写什么，所以随便写了游戏的工具箱。
+- 只是测试框架集成
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## 快速开始
+- yarn dev
+- yarn app
 
-## Type Support For `.vue` Imports in TS
+## 开发建议
+- 二次开发实现逻辑自行改造
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+## 技术选型
+- Vue 3 + TypeScript + Vite
+- Electron
+- ant-design-vue
+- dexie
+- 其他
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+## License
+- 自己写的多平台（win、mac、linux）桌面应用程序，内容关于《梦幻西游》游戏的工具箱，也分享给大家，希望有所帮助，感谢大家 [Star](https://github.com/youzhirong/mhxyTool/stargazers) & [Fork](https://github.com/youzhirong/mhxyTool/network/members) 的支持。
